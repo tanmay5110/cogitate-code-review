@@ -28,7 +28,7 @@ When the Admin uploads the Excel file, our FastAPI backend reads this _Schema ta
 
 ## 📁 Codebase Folder Structure
 
-`	ext
+```text
 cogitate-code-review/
 ├── cogitate rater/
 │   ├── backend/               # Python FastAPI & MS Excel COM Engine
@@ -47,7 +47,7 @@ cogitate-code-review/
 │   ├── templates/             # Locked, official base pricing fallback templates
 │   └── records/               # Immutable database mapping histories of executions
 └── README.md                  # This documentation file
-`
+```
 
 ---
 
@@ -65,15 +65,15 @@ Because this system daemonizes native Microsoft Windows technologies to achieve 
 
 ### Step 1: Clone the Repository
 Open your terminal and clone the repository locally.
-`powershell
+```powershell
 git clone https://github.com/tanmay5110/cogitate-code-review.git
 cd cogitate-code-review
-`
+```
 
 ### Step 2: Start the FastAPI Backend (Python)
 Navigate to the backend directory, set up your Python virtual environment, install the dependencies, and start the engine:
 
-`powershell
+```powershell
 cd "cogitate rater/backend"
 
 # Create a virtual environment
@@ -87,13 +87,13 @@ pip install -r requirements.txt
 
 # Boot up the server
 uvicorn main:app --reload
-`
+```
 *The backend API is now actively running on http://127.0.0.1:8000*
 
 ### Step 3: Start the Next.js Frontend (React)
 Open a **new, separate terminal** window. Navigate to the frontend directory, install the Node modules, and start the web interface:
 
-`powershell
+```powershell
 cd "cogitate rater/web-next"
 
 # Install Node modules
@@ -101,7 +101,7 @@ npm install
 
 # Start the development frontend server
 npm run dev
-`
+```
 *The frontend interface is now running on http://localhost:3000* 
 
 > **🎉 You're Done!** Navigate your web browser to http://localhost:3000/admin, upload an Excel file equipped with a _Schema tab, and watch the engine dynamically construct your application.
